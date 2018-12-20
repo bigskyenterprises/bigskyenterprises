@@ -1,2 +1,0 @@
-# bigskyenterprises
-construction website
