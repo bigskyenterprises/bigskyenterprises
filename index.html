@@ -1,11 +1,9 @@
+<!DOCTYPE html>
 <html>
- <meta name="viewport" content="width=device-width, initial-scale=1;maximum-scale=1.0; user-scalable=0;"> 
-  <head>
-     
-   <title>Details</title>
-      
-  <link rel="stylesheet" type="text/css">
-        
+
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type='text/javascript'>
 
 
@@ -75,184 +73,126 @@
 setTimeout("changeimage(" + every_seconds + ")", ((every_seconds) * 1500));
      
        }
-  
-      </script>
+</script>
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: text-bottom;
+
+}
+
+.topnav a#b:hover {
+height: 50px;
+  background-color:  #03a9f4;
+  color: white;
+}
+.topnav a#i{
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+.topnav a#b{
+bottom: 0px;
+}
+.topnav .icon {
+  color: grey;
+  display: none;
+
+}
+
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -70px;
+ margin-right:-8px;
     
-    <style>
+  }
+  #myimage{
+    width: 700px;
+  }
+  }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
+@media screen and (max-width: 1500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    margin-top: 0px;
+   width: 100%;
+  }}
+  .topnav.responsive a {
+    float: none;
+    display: inline;
+    text-align: left;
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
 }
-     
 #myimage{
-
-	position: absolute;
-	margin-top: 32px;
-	margin-left: -10px;
-	margin-right: -150px;
-	height: 90%;
-	width: 100%;
+margin-left: 0px;
 }
-      ul {
      
-           list-style-type: none;
-     margin-top: -10px;
-           margin: -10px ;
-  
-            
-    overflow: hidden;
+.tonav #g{
+  margin-top:0px;
+  text-align: right;
 
-     
-       }
-#l{
-                
-         display: block;
-       
-         color: white;
-     
-         text-align: center;
-         font-size: 20px; 
-         padding: 14px 40px;
-         padding-bottom: 30px;
-         padding-top: 30px;
-         text-decoration: none;
-    
-         background-color: black;
-            }
-          
-#c{
-	font-size: 30px;
-	text-align: center;
-	margin-top: 650px;
 }
-#div{width:100%;}
-@media only screen and (max-width:768px){
-	[id*="div"]{
-		width:100%;
-	}
+.topnav a#c{
+width: 840px;
+margin-left: -250px;
+
+
+  padding-right:100px;
 }
-         
-   #lo{
-                
-         display: block;
-       
-         color: white;
-     
-         text-align: center;
-          
-         padding: 14px 40px;
-         padding-bottom: 30px;
-         padding-top: 30px;
-         text-decoration: none;
-    
-         background-color: black;
-            }
-          
-  li {
-             
-     float: left;
-           
-     max-height: 70px;
-      font-size: 14px;
-         
-   }
+</style>
+</head>
+<body onload ='changeimage(2)' method="post">
 
-        #div{min-width:100%;
-        	margin-top: -50px;
-    margin-left: -45px;
-position: fixed;
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active" id="c"><img src="logo.png" height="50px" class ="log" > &nbsp&nbsp&nbsp
+BIG SKY ENTERPRISES</a>
+ <a href="#news" id="b">HOME</a>
+  <a href="#news" id="b">ABOUT US</a>
+  <a href="#contact" id="b">PROJECTS</a>
+    <a href="#contact" id="b">SERVICES</a>
+  <a href="c.html" id="b">CONTACT US</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" id="g"></i>
+  </a>
+</div>
 
-        } 
-        
-   #lo:hover 
-{background-color: #03a9f4;
-          word-wrap:break-word;
-}    
-  background-color: aqua;
+
  
-           }
-
-           
- body
-         
-   {word-wrap:break-word;
-   	background-size:cover;
- display:block;
-       max-width: 100%;
-       max-height: 100%;
-       overflow: scroll;
-      }
-     #log{
-     	overflow: auto;
-     	margin-top: 20px;
-     	margin-left: 0px;
-    }
-    #di{
-    	width: 100%;
-    }
-#us{
-	position: fixed;
-    margin-right: -0px;
-font-size:50px;
-}
-#logoi{margin-top: -10px;
-       text-decoration: none;
-         color: white;
-	font-size: 20px;
-     background-color: black;
-text-align: center;
- padding: 45px 40px;}
-    </style>
- 
-     </head>
-  
-      <body onload='changeimage(2)' >
- 
-          
-       <div id="div">
-        
-        <ul>
-<div id="di">
-<h2 id = "us">
-          <li><a href="detail.html" id = "logoi" ><img src="logo.PNG" width="120px" height="45px" id="log"></a></li>
-          <li id="l">&nbsp&nbsp&nbsp&nbsp&nbsp BIG SKY ENTERPRISES  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
-         <li><a href="aboutus.jsp" id="lo">ABOUT US</a></li>
-          <li><a href="Projects" id="lo"
-          >PROJECTS</a></li>
-         <li><a href="Services" id="lo">SERVICES</a></li>
-       
-         <li><a href="Contact.jsp" id="lo">CONTACT US</a></li>
-
-</h2>
-   
-        </ul>
-    </div>
-       </div>
-      
-     <br>
-
-        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <table width="75%" border="0"  cellpadding="0" cellspacing="0">
 
         
          <tr>
                
-           <td><img  id="myimage"> </td> 
+           <td ><img id="myimage"  width="1365" height="500" border="0"> </td> 
 
       
             <td>
@@ -266,11 +206,22 @@ text-align: center;
          <tr>
                
         </tr>
-    
-         </table>
-        
-  <div id="c">Contact Us
-  </div>
-  </body>
 
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+   
+  
+
+</script>
+
+</body>
 </html>
