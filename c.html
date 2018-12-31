@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         
+<style>
+
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: text-bottom;
+
+}
+
+.topnav a#b:hover {
+height: 50px;
+  background-color:  #03a9f4;
+  color: white;
+}
+.topnav a#i{
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+.topnav a#b{
+bottom: 0px;
+}
+.topnav .icon {
+  color: grey;
+  display: none;
+
+}
+
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -70px;
+ margin-right:-8px;
+    
+  }
+  #myimage{
+    width: 700px;
+  }
+  }
+
+
+@media screen and (max-width: 1500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    margin-top: 0px;
+   width: 100%;
+  }}
+  .topnav.responsive a {
+    float: none;
+    display: inline;
+    text-align: left;
+  }
+
+}
+#myimage{
+margin-left: 0px;
+}
+     
+.tonav #g{
+  margin-top:0px;
+  text-align: right;
+
+}
+.topnav a#c{
+width: 840px;
+margin-left: -250px;
+
+
+  padding-right:100px;
+}
+.e{
+ width:800px;
+ margin-left: 50%;
+}
+.form-horizontal{
+  margin-left: 40%;
+  border-color: black;
+  margin-top: -300px;
+}
+.add
+{
+  width: 500px;
+margin-top: 200px;
+margin-left: 50px;
+}
+h1{
+  color:#03a9f4;
+  font-size:50px;
+}
+</style>
+<script type="text/javascript" >  
+function validate(){ 
+var letters = /^[A-Za-z]+$/;  
+
+var name =document.form.username.value; 
+
+ 
+var phoneno = /^\d{10}$/;
+var pho=document.form.phone.value;
+var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+var femail = document.form.email.value;
+var ret=false;
+
+
+
+if( name == "" )
+   {
+    
+  document.getElementById("nameloc").innerHTML ="<img src='unchecked.jpg'/> Enter the  name";
+      ret=false;
+   }
+    else if(!letters.test(name))
+    {
+      document.getElementById("nameloc").innerHTML = "<img src='unchecked.jpg'/>Name can't be in numeric value";
+      ret= false;
+    }
+    else
+   {
+       ret=true;
+   }
+   
+     if(femail == "" )
+ {
+  document.getElementById("emailloc").innerHTML = "<img src='unchecked.jpg'/>enter the email";
+  ret=false;
+  }
+  else if(!emailRegex.test(femail))
+  {
+  document.getElementById("emailloc").innerHTML = "<img src='unchecked.jpg'/>enter the valid email";
+  ret= false;
+  }
+  else{
+      ret=true;
+  }
+ 
+  else if(!phoneno.test(pho))
+  {
+  document.getElementById("pholo").innerHTML = "<img src='unchecked.jpg'/>enter the valid number";
+  ret= false;
+  }
+  else
+  {ret=true;
+  }
+   return ret;
+}
+</script>  
+
+</head>
+<body onload ='changeimage(2)' >
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active" id="c"><img src="logo.png" height="50px" class ="log" > &nbsp&nbsp&nbsp
+BIG SKY ENTERPRISES</a>
+ <a href="qw.html" id="b">HOME</a>
+  <a href="#news" id="b">ABOUT US</a>
+  <a href="#contact" id="b">PROJECTS</a>
+    <a href="#contact" id="b">SERVICES</a>
+  <a href="#" id="b">CONTACT US</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" id="g"></i>
+  </a>
+</div>
+<script type="text/javascript">
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+   
+  
+
+</script>
+<div class="add">
+<p><b>ADDRESS:-</b> 303,Building No : C 38,Sector 11,<br>Mira Road(E),Thane :- 401107.</p>
+<p><b>Contact No:-</b> Mohammed Shaban (7977829341) </p>
+<p><b>Email Id:-</b>  bigskyenterprises18@gmail.com  </p>
+</div>
+<form name="form" id="ContactForm0"  onsubmit="return validate()" class="form-horizontal"  method="post" width="100" action="" style="padding:0px 0px 0px 0px;float:left;">
+            <h1 align="center">CONTACT US</h1>
+                        
+            <table border="0" width=100% cellspacing="6" cellpadding="6">
+                  
+                <tbody>
+                
+                    <tr>
+                        <td><b> Name:</b></td>
+                        <td><input type="text"  name="username" value="" />
+                        <span id="nameloc" style="color:red"></span></td>
+                    </tr>
+                    <tr>
+                        <td><b>Email Id:</b></td><td><input type="text" class="form-control required"  name="email" value="" />
+                         <span id="emailoc" style="color:red"></span></td>
+                     </tr>
+                     <tr>
+                        <td><b>Subject:</b></td><td><input type="text" class="form-control"  value="" />
+                         <span id="name1loc" style="color:red"></span></td>
+                     </tr>
+                     
+                    <tr>
+                        <td> <b>Contact No:</b></td><td>
+                      <input type="text" name="phone" value="" onsubmit="return validate()">
+                             <span id="pholo" style="color:red"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Message:</b><td><textarea name="message" rows="4" value="" ></textarea>
+                         </td>
+                     </tr><tr>
+<td>
+<input type="submit" class="button"  value="submit" /></td>
+</tr>
+
+
+</tbody>
+</table>
+</form>
+
+</body>
+
+</html>
